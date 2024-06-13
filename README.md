@@ -1,8 +1,8 @@
 # How to add additional network to pod using NMstate Operator 
 
 Tested on:
-Red Hat Openshift version 4.15.15
-Kubernetes NMState Operator 4.15.0-202406052127 
+* Red Hat Openshift version 4.15.15
+* Kubernetes NMState Operator 4.15.0-202406052127 
 
 1) Create NodeNetworkConfigurationPolicy (NNCP)
 ```   
