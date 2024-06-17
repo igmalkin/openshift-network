@@ -31,6 +31,8 @@ spec:
 ```
 apiVersion: nmstate.io/v1
 kind: NodeNetworkConfigurationPolicy
+metadata:
+  name: localnet-mapping
 spec:
   desiredState:
     ovn:
