@@ -11,7 +11,7 @@ VMware requarements (if your OCP cluster was installed on top of VMware vShere):
 
 You can find these settings in the path - Virtual Switches -> VMs Network -> Edit Settings -> Security.
 
-## Bridge CNI and localnet topology
+## Bridge CNI plugin and localnet topology
 
 1) Create NodeNetworkConfigurationPolicy (NNCP)
 ```   
@@ -113,3 +113,15 @@ template:
       }]
 ```
 
+## MACVLAN CNI plugin and localnet topology
+
+1) Create Network Attachment Definitions (NAD)
+   
+```
+apiVersion: k8s.cni.cncf.io/v1
+kind: NetworkAttachmentDefinition
+name: macvlan-ens224
+namespace: namespace
+spec:
+  config: '{"cniVersion": "0.3.1", "name": "macvlan-net224", "type": "macvlan", "master": "ens224", "mode": "bridge", "ipam": {"type": "static", "routes": [ {  "dst": "192.168.32.0/24", "gateway": "192.168.32.1" } ], "gateway": "192.168.32.1", "capabilities": { "mac": true } } }'
+```
