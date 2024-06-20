@@ -58,7 +58,12 @@ kind: NetworkAttachmentDefinition
 name: localnet-192 # <- put your NAD name
 namespace: igor # <- put your namespace
 spec:
-  config: '{"name": "localnet-192.168.0","type": "ovn-k8s-cni-overlay","cniVersion": "0.3.1","topology": "localnet","netAttachDefName": "igor/localnet-192" }'
+  config: '{
+    "name": "localnet-192.168.0",
+    "type": "ovn-k8s-cni-overlay",
+    "cniVersion": "0.3.1",
+    "topology": "localnet",
+    "netAttachDefName": "igor/localnet-192" }'
 ```
 
 `"name": "localnet-192.168.0"` - localnet from the previous step
@@ -123,5 +128,17 @@ kind: NetworkAttachmentDefinition
 name: macvlan-ens224
 namespace: namespace
 spec:
-  config: '{"cniVersion": "0.3.1", "name": "macvlan-net224", "type": "macvlan", "master": "ens224", "mode": "bridge", "ipam": {"type": "static", "routes": [ {  "dst": "192.168.32.0/24", "gateway": "192.168.32.1" } ], "gateway": "192.168.32.1", "capabilities": { "mac": true } } }'
+  config: '{
+    "cniVersion": "0.3.1",
+    "name": "macvlan-net224",
+    "type": "macvlan",
+    "master": "ens224",
+    "mode": "bridge",
+    "ipam": {
+        "type": "static",
+        "routes": [ {  "dst": "192.168.32.0/24", "gateway": "192.168.32.1" } ],
+        "gateway": "192.168.32.1",
+        "capabilities": { "mac": true } } }'
 ```
+
+2) Connect your pod (or Virtual Machine) to NAD as described above.
