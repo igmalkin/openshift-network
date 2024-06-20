@@ -1,0 +1,17 @@
+apiVersion: nmstate.io/v1
+kind: NodeNetworkConfigurationPolicy
+metadata:
+  name: localnet-mapping
+spec:
+  desiredState:
+    ovn:
+      bridge-mappings:
+        - bridge: ovs-br224
+          localnet: localnet-192.168.0
+          state: present
+        - bridge: br-ex
+          localnet: localnet-172.16.103
+          state: present
+        - bridge: ovs-br224
+          localnet: localnet-vlan150
+          state: present
