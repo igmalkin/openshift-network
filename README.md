@@ -1,4 +1,4 @@
-# How to add additional network to pod using NMstate Operator 
+# How to add additional network to pod using NMstate Operator and Multus
 
 Tested on:
 * Red Hat Openshift version 4.15.15
