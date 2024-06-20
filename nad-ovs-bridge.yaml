@@ -1,0 +1,6 @@
+apiVersion: k8s.cni.cncf.io/v1
+kind: NetworkAttachmentDefinition
+name: localnet-192-168
+namespace: igor
+spec:
+  config: '{"name": "localnet-192.168.0","type": "ovn-k8s-cni-overlay","cniVersion": "0.3.1","topology": "localnet","netAttachDefName": "igor/localnet-192-168" }'
