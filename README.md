@@ -17,7 +17,7 @@ You can find these settings in the path - Virtual Switches -> VMs Network -> Edi
 
 Bridge: Configure a bridge-based additional network to allow pods on the same host to communicate with each other and the host.
 
-[Topology description (localnet or layer2)](https://docs.openshift.com/container-platform/4.15/networking/multiple_networks/configuring-additional-network.html)
+[Topology description (localnet or layer2)](https://docs.openshift.com/container-platform/4.15/networking/multiple_networks/configuring-additional-network.html#configuration-ovnk-additional-networks_configuring-additional-network)
 
 1) Create NodeNetworkConfigurationPolicy (NNCP)
 ```   
