@@ -11,7 +11,13 @@ VMware requarements (if your OCP cluster was installed on top of VMware vSphere)
 
 You can find these settings in the path - Virtual Switches -> VMs Network -> Edit Settings -> Security.
 
+[Plugin's description link](https://docs.openshift.com/container-platform/4.15/networking/multiple_networks/understanding-multiple-networks.html#additional-networks-provided)
+
 ## Bridge CNI plugin and localnet topology
+
+Bridge: Configure a bridge-based additional network to allow pods on the same host to communicate with each other and the host.
+
+[Topology description (localnet or layer2)](https://docs.openshift.com/container-platform/4.15/networking/multiple_networks/configuring-additional-network.html)
 
 1) Create NodeNetworkConfigurationPolicy (NNCP)
 ```   
