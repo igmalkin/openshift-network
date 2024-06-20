@@ -39,6 +39,7 @@ spec:
       bridge-mappings:
         - bridge: ovs-br224 # <- put your bridge name
           localnet: localnet-192.168.0 # <- put your network name (will be used on the next step)
+          state: present
 ```
 
 3) Create Network Attachment Definitions (NAD)
