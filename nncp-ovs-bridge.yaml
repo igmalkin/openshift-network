@@ -1,0 +1,19 @@
+apiVersion: nmstate.io/v1
+kind: NodeNetworkConfigurationPolicy
+metadata:
+  name: ovs-br224
+spec:
+  desiredState:
+    interfaces:
+      - bridge:
+          allow-extra-patch-ports: true
+          options:
+            stp:
+              enabled: false
+          port:
+            - name: enp6s21
+        name: ovs-br224
+        state: up
+        type: ovs-bridge
+    nodeSelector:
+      node-role.kubernetes.io/control-plane: ''  
