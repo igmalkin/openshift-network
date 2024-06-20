@@ -4,7 +4,7 @@ Tested on:
 * Red Hat Openshift version 4.15.15
 * Kubernetes NMState Operator 4.15.0-202406052127
 
-VMware requarements (if your OCP cluster was installed on top of VMware vShere):
+VMware requarements (if your OCP cluster was installed on top of VMware vSphere):
 * Promiscuous mode - Override
 * MAC address changes - Override
 * Forged transmits - Override
