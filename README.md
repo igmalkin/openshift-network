@@ -2,7 +2,16 @@
 
 Tested on:
 * Red Hat Openshift version 4.15.15
-* Kubernetes NMState Operator 4.15.0-202406052127 
+* Kubernetes NMState Operator 4.15.0-202406052127
+
+VMware requarements (if your OCP cluster was installed on top of VMware vShere):
+* Promiscuous mode - Override
+* MAC address changes - Override
+* Forged transmits - Override
+
+You can find these settings in the path - Virtual Switches -> VMs Network -> Edit Settings -> Security.
+
+## Bridge CNI and localnet topology
 
 1) Create NodeNetworkConfigurationPolicy (NNCP)
 ```   
@@ -103,3 +112,4 @@ template:
           "dns": {}
       }]
 ```
+
