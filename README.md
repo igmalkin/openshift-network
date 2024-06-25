@@ -61,8 +61,9 @@ spec:
 ```
 apiVersion: k8s.cni.cncf.io/v1
 kind: NetworkAttachmentDefinition
-name: localnet-192 # <- put your NAD name
-namespace: igor # <- put your namespace
+metadata:
+  name: localnet-192 # <- put your NAD name
+  namespace: igor # <- put your namespace
 spec:
   config: '{
     "name": "localnet-192.168.0",
